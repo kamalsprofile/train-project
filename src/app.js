@@ -57,7 +57,7 @@ function simulate_moving(obj, source, destination) {
         var myInterval = setInterval(
             () => {
                 if (obj.trainStopped) {
-                    return ;
+                    return;
                 }
                 show_map(obj, myLocation);
 
@@ -155,7 +155,7 @@ Data.forEach(element => {
         element.trainStopped = true
     })
     document.querySelector(`#train-${element.id}`).appendChild(stopbtn);
-    btn.innerHTML = "hello";
+    btn.innerHTML = "Move train";
     btn.setAttribute("id", `train-${element.id}`)
     btn.setAttribute("class", `see-map`)
     document.querySelector(`#train-${element.id}`).appendChild(btn);
