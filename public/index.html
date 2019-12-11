@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCMZYRVJsUg4d1SF_wz060JVmw4AagmkuU" async defer></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-box">
+            <img class="logo" src="./img/logo1.png" alt="Logo">
+        </div>
+        <div class="text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary-main">trains</span>
+                <span class="heading-primary-sub">cphbusiness</span>
+            </h1>
+            <a href="#train-1" class="btn btn-white btn-animated">See Trips</a>
+        </div>
+
+    </header>
+    <div class="container-fluid">
+        <div id="root">
+            <div id="map_canvas"></div>
+            <button onclick="move_all_trains()">Move All Trains</button>
+            <div id="content" class="row">
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="./bundle.js"></script>
+
+</body>
+
+</html>
