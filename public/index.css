@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 body{
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -14,6 +18,12 @@ body{
 .container{
     width:100%;
     height: 100%;
+}
+#content{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    height: 500px;
 }
 .header{
     position: relative;
@@ -43,9 +53,41 @@ body{
 }
 
 .trains{
+    border: 3px solid rgba(126, 213, 111, 0.808);
+    background-color: #ccc;
+    width: 50%;
+    height: 300px;
+    color: white;
+    border-radius: 100px;
+    text-align: center;
+    padding-top: 70px;
+    margin: 20px;
     
 }
+.trains .stations{
+ text-align: left;
+font-weight: 400;
+}
 
+.moveAllTrains{
+    margin: 0 auto;
+   margin-top: 100px; 
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 100px;
+    background-image:linear-gradient(
+        to right,
+        rgba(126, 213, 111, 0.808),
+        rgba(40, 180, 133, 0.808));
+        color: #fff;
+        font-weight: 400;
+        
+}
+.moveAllTrains:focus{
+    outline: none; 
+}
 
 .text-box{
     position: absolute;
@@ -133,6 +175,13 @@ margin-bottom: 20px;
 .btn-white:hover{
     color: #777;
 }
+.btn-green{
+    background-color: rgba(40, 180, 133, 0.808);
+    color: #fff;
+}
+.btn-green:hover{
+    color: #fff;
+}
 
 @keyframes moveInUp{
     0%{
@@ -170,3 +219,13 @@ margin-bottom: 20px;
     animation: moveInUp 2s ease-in-out .75s;
     animation-fill-mode: backwards;
 }
+.see-map{
+    margin: 20px 20px;
+}
+.stop-btn{
+    margin: 20px 20px;
+}
+
+
+
+

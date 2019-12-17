@@ -86,7 +86,7 @@ function simulate_moving(obj, source, destination) {
                     clearInterval(myInterval);
                     resolve('finished');
                     var date = new Date();
-                    document.getElementById(destination.id + "-time").innerText = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+                    document.getElementById(destination.id + "-time").innerText = ":" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
                 }
 
             }, 1000
@@ -128,15 +128,14 @@ var getMap = function () {
 const displayTrain = (train) => {
     console.log(train)
     if (train) {
-        return ` <div class="col col-6 trains" id="train-${train.id}" >
+        return ` <div class="col col-4 trains" id="train-${train.id}" >
 <h1>${train.name}</h1>
 <div class="row">
 ${train.stations.map((station) => {
-                return (`<div class="col col-4">${station.name}</div><div id='${station.id}-time'></div>`)
+                return (`<div class="col col-12 stations">${station.name} <span id='${station.id}-time'></span></div>`)
             }).join("")}
     
 </div>
-<button id="train-${train.id}" onclick="getMap()" class="btn btn-primary">anything</button>
 </div>`;
     }
 
@@ -150,14 +149,15 @@ Data.forEach(element => {
     root.insertAdjacentHTML("beforeend", displayTrain(element));
     const btn = document.createElement("button");
     const stopbtn = document.createElement("button");;
-    stopbtn.innerHTML = "Stop the train";
+    stopbtn.innerHTML = "Stop train";
+    stopbtn.setAttribute("class", `btn btn-green stop-btn`)
     stopbtn.addEventListener("click", function () {
         element.trainStopped = true
     })
     document.querySelector(`#train-${element.id}`).appendChild(stopbtn);
     btn.innerHTML = "Move train";
     btn.setAttribute("id", `train-${element.id}`)
-    btn.setAttribute("class", `see-map`)
+    btn.setAttribute("class", `btn btn-green see-map`)
     document.querySelector(`#train-${element.id}`).appendChild(btn);
 
     btn.addEventListener("click", function () {
